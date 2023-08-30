@@ -1,15 +1,13 @@
 <script setup lang="ts">
 const props = defineProps<{
-  year: string,
-  month: string,
-  day: string,
+  targetDate: string,
 }>()
 
+const [year, month, day] = props.targetDate.split('-')
 let url = new URL('/api/horoscope', location.href)
-url.searchParams.set('year', props.year)
-url.searchParams.set('month', props.month)
-url.searchParams.set('day', props.day)
-
+url.searchParams.set('year', year)
+url.searchParams.set('month', month)
+url.searchParams.set('day', day)
 
 const { data, pending, error } = await useAsyncData(
   url.href,
