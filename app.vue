@@ -1,17 +1,19 @@
 <script setup lang="ts">
-const {
-  year,
-  month,
-  day,
-  min,
-  max,
-  targetDate,
-  changeDate,
-} = useDate()
+const { targetDate, changeDate } = useDate()
 </script>
 
 <template>
+  <AppHeader @update="changeDate" />
+  <main class="main-contents">
     <FortuneResult v-if="targetDate" :targetDate="targetDate" :key="targetDate" />
     <InitialGuide v-else />
-  </div>
+  </main>
+  <AppFooter />
 </template>
+
+<style scoped>
+.main-contents {
+  margin: 0 auto;
+  width: var(--contents-width);
+}
+</style>
