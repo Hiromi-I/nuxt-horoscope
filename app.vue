@@ -13,7 +13,7 @@ const { targetDate, changeDate } = useDate()
 
 <style scoped>
 .main-contents {
-  margin: 0 auto;
+  margin: 0 auto 100px;
   width: var(--contents-width);
 }
 </style>
