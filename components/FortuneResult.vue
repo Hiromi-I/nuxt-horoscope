@@ -19,6 +19,7 @@ const results = data.value?.horoscope[`${year}/${month}/${day}`]
 </script>
 
 <template>
+  <h1 class="title">{{ year }}年{{ month }}月{{ day }}日の占い結果</h1>
   <div>
     <p v-if="pending">Loading...</p>
     <p v-else-if="error">Error...</p>
@@ -33,6 +34,12 @@ const results = data.value?.horoscope[`${year}/${month}/${day}`]
 </template>
 
 <style lang="scss" scoped>
+.title {
+  color: var(--theme-color);
+  font-size: 36px;
+  text-align: center;
+  margin: 30px 0;
+}
 .signsList {
   display: grid;
   gap: 20px;
