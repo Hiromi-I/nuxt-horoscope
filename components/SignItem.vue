@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import LuckyStars from "./LuckyStars.vue";
 import type { SignResult } from "@/types/horoscope"
 import { getImagePath } from "@/utils/sign"
 
