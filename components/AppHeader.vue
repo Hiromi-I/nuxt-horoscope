@@ -1,9 +1,11 @@
 <script setup lang="ts">
+import { getToday, get10DaysLater } from "@/utils/date"
 const emits = defineEmits<{
   update: [event: Event]
 }>()
 
-const { min, max } = useDateSpan()
+const min = getToday()
+const max = get10DaysLater()
 const onChange = (event: Event) => emits('update', event)
 </script>
 
@@ -90,3 +92,4 @@ const onChange = (event: Event) => emits('update', event)
   padding: 5px 0 0;
 }
 </style>
+~/utils/date
