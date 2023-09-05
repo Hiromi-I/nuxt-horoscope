@@ -19,5 +19,8 @@
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2",
     "vitest": "^0.34.3"
+  },
+  "dependencies": {
+    "@vuepic/vue-datepicker": "^6.0.3"
   }
 }
