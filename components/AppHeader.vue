@@ -1,14 +1,3 @@
-<script setup lang="ts">
-import { getToday, get10DaysLater } from "@/utils/date"
-const emits = defineEmits<{
-  update: [event: Event]
-}>()
-
-const min = getToday()
-const max = get10DaysLater()
-const onChange = (event: Event) => emits('update', event)
-</script>
-
 <template>
   <header class="header">
     <div class="header-container">
@@ -22,15 +11,7 @@ const onChange = (event: Event) => emits('update', event)
       </a>
 
       <div class="date-container">
-        <p class="date-description">日付を選択して下さい</p>
-        <input
-          type="date"
-          class="date-picker"
-          pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
-          :min="min"
-          :max="max"
-          @change="onChange"
-        />
+        <DatePicker />
       </div>
     </div>
   </header>
@@ -68,28 +49,11 @@ const onChange = (event: Event) => emits('update', event)
 }
 
 .date-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-}
-
-.date-description {
-  color: white;
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.date-picker {
-  background-color: white;
-  border: solid 2px var(--sub-color);
-  display: inline-block;
-  font-size: 16px;
-  padding: 3px;
   width: 100%;
-}
 
-.date-picker::-webkit-calendar-picker-indicator {
-  padding: 5px 0 0;
+  @include tab {
+    width: 240px;
+  };
 }
 </style>
 ~/utils/date
