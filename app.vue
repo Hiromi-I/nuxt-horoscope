@@ -1,9 +1,9 @@
 <script setup lang="ts">
-const { targetDate, changeDate } = useDate()
+const { targetDate } = useDate()
 </script>
 
 <template>
-  <AppHeader @update="changeDate" />
+  <AppHeader  />
   <main class="main-contents">
     <FortuneResult v-if="targetDate" :targetDate="targetDate" :key="targetDate" />
     <InitialGuide v-else />
