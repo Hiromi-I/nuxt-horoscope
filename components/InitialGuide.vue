@@ -1,20 +1,22 @@
 <template>
   <div class="container">
-    <p class="info">日付を選択して下さい</p>
+    <p class="info">
+      日付を選択して下さい
+    </p>
     <picture>
       <source
         srcset="@/assets/images/signs-lg.png"
         media="(min-width: 1200px)"
-      />
+      >
       <source
         srcset="@/assets/images/signs-md.png"
         media="(min-width: 768px)"
-      />
+      >
       <img
         src="@/assets/images/signs-sm.png"
         alt="星座一覧"
         class="image"
-      />
+      >
     </picture>
   </div>
 </template>

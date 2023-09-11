@@ -7,7 +7,7 @@
           alt="星座占い"
           width="250"
           height="60"
-        />
+        >
       </a>
 
       <div class="date-container">
@@ -56,4 +56,3 @@
   };
 }
 </style>
-~/utils/date

@@ -3,9 +3,9 @@ const { targetDate } = useDate()
 </script>
 
 <template>
-  <AppHeader  />
+  <AppHeader />
   <main class="main-contents">
-    <FortuneResult v-if="targetDate" :targetDate="targetDate" :key="targetDate" />
+    <FortuneResult v-if="targetDate" :key="targetDate" :target-date="targetDate" />
     <InitialGuide v-else />
   </main>
   <AppFooter />

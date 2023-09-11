@@ -1,7 +1,6 @@
 import { describe, test, vi, beforeEach, afterEach, expect } from 'vitest'
 import { getToday, get10DaysLater } from '@/utils/date'
 
-
 describe('date', () => {
   beforeEach(() => {
     vi.useFakeTimers()
@@ -12,7 +11,7 @@ describe('date', () => {
   })
 
   test('today', () => {
-    const now = new Date(2023, 1-1, 1)
+    const now = new Date(2023, 1 - 1, 1)
     vi.setSystemTime(now)
 
     const today = getToday()
@@ -21,7 +20,7 @@ describe('date', () => {
   })
 
   test('10 days later', () => {
-    const now = new Date(2023, 1-1, 1)
+    const now = new Date(2023, 1 - 1, 1)
     vi.setSystemTime(now)
 
     const targetDate = get10DaysLater()
