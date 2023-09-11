@@ -2,7 +2,6 @@ import { describe, it, expect } from 'vitest'
 import { render } from '@testing-library/vue'
 import LuckyStars from '@/components/LuckyStars.vue'
 
-
 describe('LuckyStars', () => {
   it('reder 3 stars', () => {
     const props = { score: 3 }

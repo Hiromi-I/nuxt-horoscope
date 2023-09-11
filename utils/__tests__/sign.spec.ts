@@ -1,7 +1,6 @@
 import { describe, test, expect } from 'vitest'
 import { getImagePath } from '@/utils/sign'
 
-
 describe('sign', () => {
   test('aries', () => {
     const jSignName = '牡羊座'
